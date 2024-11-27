@@ -24,3 +24,20 @@ The main file that runs the simulations for different schedules is `simulate.py`
 
 Here each teams list of opponents is entered in sequentially starting from the first week to the last or most recent week. The lists must all have the same length.
 
+The `points.json` file should list the number of points each team scores each week as so
+
+```
+{
+    "team 1": [
+        week 1 points,
+        week 2 points,
+        ...
+    ],
+    ...
+    "team n" :[
+        week 1 points,
+        week 2 points,
+        ...
+    ]
+}
+```
