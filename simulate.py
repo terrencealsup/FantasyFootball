@@ -74,6 +74,8 @@ def get_ranks_from_wins_points(wins, points, participants, n):
 # Get actual rankings from provided schedule
 ranks = get_ranks_from_wins_points(wins, total_points, participants, n)
 
+with open('actual_rankings_new.json', 'w') as fp:
+    json.dump(ranks, fp)
 
 
 
@@ -134,5 +136,6 @@ else:
             ranks_count[r][ranks[r]] += 1
 
 
-with open('temp.json', 'w') as fp:
+
+with open('rankings_new.json', 'w') as fp:
     json.dump(ranks_count, fp)

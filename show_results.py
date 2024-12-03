@@ -11,10 +11,10 @@ plt.rcParams.update({
 import pandas as pd
 import numpy as np
 
-with open('rankings.json', 'r') as fp:
+with open('rankings_new.json', 'r') as fp:
     ranks = json.load(fp)
 
-with open('actual_rankings.json', 'r') as fp:
+with open('actual_rankings_new.json', 'r') as fp:
     actual_ranks = json.load(fp)
 
 
@@ -63,9 +63,11 @@ print('\n')
 print(''.join(["="]*32))
 r = 1
 for p in lucky_ranks.keys():
-    print(f"{r}, {p}")
+    print(f"{r}, {p}, {lucky_ranks[p]}")
     r += 1
 print('\n')
+
+
 
 cmap = plt.get_cmap('RdYlGn', n)
 
@@ -126,7 +128,7 @@ ax.set_title("Player Standings")
 plt.tight_layout()
 
 
-fig.savefig('temp.pdf')
+fig.savefig('results_new.pdf')
 
 
 
